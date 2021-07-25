@@ -1,0 +1,28 @@
+
+.single-activity-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:10px;
+  padding:0 10px 10px;
+  color:white;
+}
+.single-activity-container:hover{
+  border-bottom: 1px solid rgb(0, 253, 241);
+  cursor: pointer;
+}
+.activity-text .p{
+  font-size: 20px;
+}
+.grey{
+  color:rgb(179, 190, 201);
+  font-size: 15px;
+}
+
+
+.trash{
+  padding:10px 10px;
+  border:0;
+  border-radius: 3px;
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+
+
+
+
+.activity-container{
+  height: 50%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+.generate-btn{
+  margin:0;
+  height: 150px;
+  width: 150px;
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  border:none;
+  transition: all ease 0.5s;
+}
+.generate-btn:hover{
+  background: rgb(79, 32, 123);
+  color:white;
+}
+
+.visible-activity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visible-activity button{
+  padding:5px 10px;
+  margin-top:10px;
+  cursor: pointer;
+}
