@@ -1,4 +1,7 @@
 # Getting Started with Create React App
+Task generator app with typescript
+ <a href="https://priceless-lovelace-fa5c5b.netlify.app/">Live Site</a>
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
