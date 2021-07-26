@@ -6,6 +6,7 @@
   margin-top:10px;
   padding:0 10px 10px;
   color:white;
+  border-bottom: 1px solid transparent;
 }
 .single-activity-container:hover{
   border-bottom: 1px solid rgb(0, 253, 241);

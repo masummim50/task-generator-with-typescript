@@ -1,4 +1,4 @@
-import React, { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
+import React, { createContext, Dispatch, SetStateAction, useEffect, useState } from 'react';
 import './App.css';
 import Home from './Components/Home/Home';
 import {
@@ -20,6 +20,16 @@ export type contextType = {
 export const Context = createContext<contextType>({} as contextType)
 function App() {
   const [added, setAdded] = useState<ActivityType[] | []>([])
+
+  useEffect(()=>{
+    if(sessionStorage.getItem('allactivity')===null){
+      console.log('nothing here')
+    }else{
+      let data = sessionStorage.getItem('allactivity');
+      let parsed = JSON.parse(data || '{}');
+      setAdded(parsed)
+    }
+  },[added])
   
   return (
     <Context.Provider value={{added, setAdded}}>

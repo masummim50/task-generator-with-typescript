@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Context, contextType } from '../../App';
 import './ActivityContainer.css'
 
@@ -36,14 +36,16 @@ const ActivityContainer = () => {
       .then(res=>res.json())
       .then(data=>setActivity(data))
     }
-  const {added, setAdded} = useContext<contextType>(Context)
+    const {added, setAdded} = useContext<contextType>(Context);
     const addtolist = (activity:ActivityType)=>{
       if(added.filter(ad=> ad.activity === activity.activity).length === 1){
         return false
       }else{
-      setAdded([...added, activity])
+      sessionStorage.setItem('allactivity', JSON.stringify([...added, activity]))
+      setAdded([...added, activity]);
       }
     }
+    
 
   return (
     <>

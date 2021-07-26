@@ -7,7 +7,8 @@ import './SingleActivity.css';
 const SingleActivity = (props:ActivityType) => {
   const {added, setAdded} = useContext(Context)
   const trash = (ac:ActivityType)=>{
-    let newlist = added.filter(ad=> ad.activity !== ac.activity)
+    let newlist = added.filter(ad=> ad.activity !== ac.activity);
+    sessionStorage.setItem('allactivity', JSON.stringify(newlist))
     setAdded(newlist)
   }
   return (
